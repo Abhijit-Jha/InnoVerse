@@ -1,0 +1,26 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+nextjs-portal {
+  display: none;
+}
+/* styles.css */
+.loader {
+  border-width: 16px; /* Adjust thickness */
+  border-style: solid;
+  border-color: transparent; /* Top and bottom colors */
+  border-top-color: #f00; /* Red color */
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+@keyframes bounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-20px); }
+}
