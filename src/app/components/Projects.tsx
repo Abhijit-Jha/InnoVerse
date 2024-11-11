@@ -12,9 +12,9 @@ export interface ProjectType {
     }
     title: string;
     description: string;
-    image?: string | null;
-    source_code?: string | null;
-    live_Link?: string | null;
+    image: string | null;
+    source_code: string | null;
+    live_Link: string | null;
     tech_stack: string[];
 }
 
@@ -41,8 +41,9 @@ async function getProjectDetails() {
 }
 
 
-const Projects = () => {
-    const data = use(getProjectDetails())
+const Projects = async() => {
+    // fixed : for you page not updating
+    const data = await getProjectDetails()
     
     if (!data.length) {
         return <div className='mt-24 '><NoProjects /></div>
