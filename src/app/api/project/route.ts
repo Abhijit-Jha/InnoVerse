@@ -6,8 +6,8 @@ import { NextRequest, NextResponse } from "next/server"
 export async function POST(req: NextRequest) {
     try {
         const data = await req.json().catch((() => null));
-        const techStack = data.tech_stack.split(",")
-        // console.log(data, techStack)
+        const techStack = data.tech_stack? data.tech_stack.split(",") : []
+        
         if (!data?.title || !data?.description) {
             return NextResponse.json({
                 "error": "Please provide Title and Description!",

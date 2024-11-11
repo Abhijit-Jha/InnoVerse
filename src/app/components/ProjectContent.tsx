@@ -93,7 +93,7 @@ const ProjectContent = (payload: ProjectType) => {
          
               <div className="flex items-center justify-between">
                 <div className='flex space-x-2 items-center '>
-                {(payload.tech_stack ?? []).slice(0, 3).map((tech: string, index: number) => (
+                {(payload.tech_stack).slice(0, 3).map((tech: string, index: number) => (
                   <div
                     key={index}
                     className="text-white text-sm font-semibold bg-gradient-to-r from-purple-600 to-pink-500 px-3 py-1 rounded-full cursor-pointer"

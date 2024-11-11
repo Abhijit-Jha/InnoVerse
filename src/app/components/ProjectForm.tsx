@@ -109,7 +109,7 @@ const ProjectForm = ({ setShowModal, editable = false, projectDetails }: { setSh
         <div>
             <ToastContainer />
             <div className='text-xl font-bold text-center mb-5'>
-                Upload Your Project
+                {editable? "Update Your Project" : "Upload Your Project"}
             </div>
             <Input type='text' placeholder='Title..' label='Title' error='' onChange={(e) => { setTitle(e.target.value) }} value={title}></Input>
             <TextArea handleChange={(e) => setDescription(e.target.value)} value={description}></TextArea>
